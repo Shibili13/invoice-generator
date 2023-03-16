@@ -63,3 +63,6 @@ def pdf(request):
     slr = seller.objects.all()
     return render(request,'pdf.html',{'seller':slr})
 
+def cart(request):
+    items = range(10)
+    return render(request, 'cart.html', {'items': items})
